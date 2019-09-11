@@ -1,0 +1,36 @@
+/*!
+Theme Name: edit_theme Theme
+Author: Kachniss
+Author URI: http://kachniss.com
+Description: A WordPress theme for edit_theme website.
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: edit_theme
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+
+edit_theme Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+@import 'settings/normalize';
+
+@import 'settings/variables';
+
+@import 'settings/mixins';
+
+@import 'settings/fonts';
+
+@import 'settings/animations';
+
+@import 'page-parts/header';
+
+@import 'page-parts/navigation';
+
+@import 'page-parts/footer';
+
+@import 'pages/page-general';
+
+@import 'pages/front-page';

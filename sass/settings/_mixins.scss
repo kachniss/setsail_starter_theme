@@ -1,0 +1,71 @@
+@mixin desktop {
+    @media screen and (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin content {
+    @media screen and (min-width: $content-width) {
+        @content;
+    }
+}
+
+@mixin button {
+    font-size: $font-size-button;
+    font-weight: 500;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 34px;
+    margin-top: $space;
+    padding: $space / 3 $space;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 25px;
+    outline: none;
+
+@include desktop {
+        margin: $space 0;
+    }
+}
+
+@mixin ie-grid ($cols, $maxrows, $gapRow: 0, $gapColumn: 0) {
+    @for $i from 1 through $maxrows {
+        @for $j from 0 through $cols - 1 {
+            & > *:nth-child(#{$cols * $i - $j}) {
+                grid-column: #{$cols - $j};
+                grid-row: #{$i};
+
+                @if $i != 1 {
+                    margin-top: $gapRow;
+                }
+
+                @if $j == 0 {
+                    margin-left: $gapColumn / 2;
+                }
+
+                @else if $j == $cols - 1 {
+                    margin-right: $gapColumn / 2;
+                } @else {
+                    margin-right: $gapColumn / 2;
+                    margin-left: $gapColumn / 2;
+                }
+            }
+        }
+    }
+}
+
+@mixin is-ie {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}

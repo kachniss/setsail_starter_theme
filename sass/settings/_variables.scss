@@ -1,0 +1,54 @@
+// Structure
+
+$space: 1.5rem;
+
+$desktop-width: 1000px;
+
+$content-width: 1440px;
+
+// Colors
+$color__background: #fff;
+
+$color__background-grey: #ecf0f1;
+
+$color__text-main: #121f2c;
+
+$color__text-white: #fff;
+
+$color__brand-red: #ea182c;
+
+$color__brand-brown: #60484b;
+
+$color__brand-green: #2b3d36;
+
+$color__text-dark: #2c3e50;
+
+$color__placeholder: #9e9e9e;
+
+$color__link: $color__brand-red; //
+$color__link-visited: darken($color__link, 10); //
+$color__link-hover: darken($color__link, 10); //
+
+$font-family_default: 'Roboto', sans-serif;
+
+$font-family_headings: 'Lato', sans-serif;
+
+$font-size-default: 14px;
+
+$font-size-large: 18px;
+
+$font-size-medium: 16px; //
+
+$font-size-xsmall: 10px;
+
+$font-size-button: 12px;
+
+$font-size-nav: 12px;
+
+$font-size_h1: 34px;
+
+$font-size_h1-large: 54px; //
+
+$font-size_h2: 23px;
+
+$font-size_h3: 12px;

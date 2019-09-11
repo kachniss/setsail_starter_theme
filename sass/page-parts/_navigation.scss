@@ -1,0 +1,121 @@
+/*******************************************************************************
+*** NAVIGATION
+*******************************************************************************/
+a {
+    font-weight: bold;
+
+    transition: color .3s ease-in-out;
+    text-decoration: none;
+}
+
+.main-navigation {
+    ul {
+        display: flex;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    a {
+        font-size: $font-size-nav;
+        font-weight: normal;
+
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        letter-spacing: .5px;
+
+        color: $color__text-dark;
+    }
+}
+
+/*******************************************************************************
+*** MOBILE NAVIGATION
+*******************************************************************************/
+.header-navigation-mobile {
+    @include desktop {
+        display: none;
+    }
+}
+
+#site-navigation-mobile {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 100vw;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    width: 101vw;
+    height: 100vh;
+
+    transition: left .5s cubic-bezier(.715, .000, .315, 1.000);
+
+    background: $color__background;
+
+@include desktop {
+        display: none;
+    }
+
+    &.toggled {
+        left: 0vw;
+
+        li {
+            margin-left: 6rem;
+
+            animation: mobileMenu .3s linear forwards;
+
+            opacity: 0;
+
+            &:first-of-type {
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(2) {
+                animation-delay: .6s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .8s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: 1s;
+            }
+        }
+    }
+
+    ul {
+        align-items: center;
+        flex-flow: column;
+
+        padding: 0;
+    }
+
+    li {
+        margin-right: 0;
+        padding: $space / 2 0;
+
+        a {
+            font-size: 35px;
+        }
+    }
+}
+
+.menu-toggle {
+    position: absolute;
+    z-index: 9999999;
+    top: -15px;
+    right: $space;
+
+    border: 0;
+    outline: none;
+    background: transparent;
+
+@include desktop {
+        display: none;
+    }
+}
