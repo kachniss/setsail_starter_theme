@@ -1,1 +1,5 @@
 <?php
+
+/**
+ * CUSTOM AJAX FUNCTIONS
+ */

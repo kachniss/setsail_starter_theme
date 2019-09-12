@@ -21,7 +21,7 @@
         * logos
     * videos
 
-## Outpus
+## Output
 * minified CSS in `/build/css`
 * minified JS in `/build/js`
 

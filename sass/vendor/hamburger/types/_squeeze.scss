@@ -1,0 +1,59 @@
+@if index($hamburger-types, squeeze) {
+    /*
+   * Squeeze
+   */
+    .hamburger--squeeze {
+        .hamburger-inner {
+            transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+            transition-duration: .075s;
+
+            background-color: $color__text-main;
+
+            &::before {
+                transition: top .075s .12s ease,
+                opacity .075s ease,
+                background-color .3s ease-in-out;
+
+                background-color: $color__text-main;
+            }
+
+            &::after {
+                transition: bottom .075s .12s ease,
+                transform .075s cubic-bezier(.55, .055, .675, .19),
+                background-color .3s ease-in-out;
+
+                background-color: $color__text-main;
+            }
+        }
+
+        &.is-active {
+            .hamburger-inner {
+                transition-delay: .12s;
+                transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+                transform: rotate(45deg);
+
+                background-color: $color__text-main;
+
+                &::before {
+                    top: 0;
+
+                    transition: top .075s ease,
+                    opacity .075s .12s ease;
+
+                    opacity: 0;
+                    background-color: $color__text-main;
+                }
+
+                &::after {
+                    bottom: 0;
+
+                    transition: bottom .075s ease,
+                    transform .075s .12s cubic-bezier(.215, .61, .355, 1);
+                    transform: rotate(-90deg);
+
+                    background-color: $color__text-main;
+                }
+            }
+        }
+    }
+}
