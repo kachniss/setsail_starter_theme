@@ -6,6 +6,7 @@
 * run `npm init`
 * check gulpfile
 * run `gulp`
+* edit variables & styles
 
 ## Input
 * CSS & Sass files in `/sass`
